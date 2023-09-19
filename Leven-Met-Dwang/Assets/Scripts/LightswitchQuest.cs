@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class QuestTracker : MonoBehaviour
+public class LightswitchQuest : MonoBehaviour
 {
     [SerializeField] private int neededClicks = 8;
     [SerializeField] private TMP_Text _UItext;
