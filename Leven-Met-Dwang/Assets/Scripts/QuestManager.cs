@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class QuestManager : MonoBehaviour
 {
     [SerializeField] private Quest[] _questArray;
+    Quest _currentQuest;
     private int _currentQuestIndex = 0;
 
     private void OnEnable()
@@ -27,14 +28,18 @@ public class QuestManager : MonoBehaviour
 
     private void StartNewQuest()
     {
-        _questArray[_currentQuestIndex].ActivateQuest();
-        Debug.Log("Quest Started");
+        if (_currentQuestIndex < _questArray.Length)
+        {
+            _currentQuest = Instantiate<Quest>(_questArray[_currentQuestIndex], transform.position, Quaternion.identity);
+            _currentQuest.ActivateQuest();
+        }
+        else Debug.Log("No quest available");        
     }
 
     private void FinishCurrentQuest(OnQuestComplete questCompleteEvent)
     {
-        _questArray[_currentQuestIndex].DeactivateQuest();
+        _currentQuest.DeactivateQuest();
         _currentQuestIndex++;
-        Debug.Log("Quest Ended");
+        StartNewQuest();
     }
 }

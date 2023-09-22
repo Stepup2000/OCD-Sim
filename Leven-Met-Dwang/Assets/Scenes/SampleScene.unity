@@ -2959,9 +2959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 879970445739519542, guid: e958dcab2bc26b04aaa20d4a2a65ed6c, type: 3}
+  - {fileID: 879970445739519542, guid: e958dcab2bc26b04aaa20d4a2a65ed6c, type: 3}
 --- !u!4 &483466311
 Transform:
   m_ObjectHideFlags: 0
@@ -4051,20 +4050,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172157009}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.45}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1807826102}
   - {fileID: 1598331808}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1418021977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.325, y: -0.014}
+  m_SizeDelta: {x: 800, y: 398.63855}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1172157011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4104,7 +4103,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1172157013
 Canvas:
   m_ObjectHideFlags: 0
@@ -4114,7 +4113,7 @@ Canvas:
   m_GameObject: {fileID: 1172157009}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 1418021980}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -4680,7 +4679,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1172157010}
   m_Father: {fileID: 113798683}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1418021978
@@ -7783,7 +7783,6 @@ SceneRoots:
   - {fileID: 1221771146}
   - {fileID: 291733493}
   - {fileID: 435682489}
-  - {fileID: 1172157010}
   - {fileID: 236272662}
   - {fileID: 1415834638}
   - {fileID: 483466311}

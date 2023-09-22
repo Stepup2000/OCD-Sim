@@ -12,11 +12,14 @@ public class BookQuest : Quest
         // Find all instances of BookPlaceChecker in the scene
         _bookCheckers = FindObjectsOfType<BookPlaceChecker>();
         InvokeRepeating("CheckQuestCompletion", 1f, 1f);
+        Debug.Log("Quest Started");
     }
 
     override public void DeactivateQuest()
     {
         CancelInvoke("CheckQuestCompletion");
+        Debug.Log("Quest Ended");
+        Destroy(gameObject);
     }
 
     override public void CheckQuestCompletion()
@@ -33,7 +36,7 @@ public class BookQuest : Quest
             }
         }
 
-        Debug.Log("Booksplaced" + allCheckersFilled);
+        //Debug.Log("Booksplaced" + allCheckersFilled);
 
         // Now you can use the 'allCheckersFilled' boolean to determine if all checkers are filled
         if (allCheckersFilled && _questCompleted == false)
