@@ -28,3 +28,10 @@ public class OnQuestComplete : Event
     {
     }
 }
+
+public class OnLightClicked : Event
+{
+    public OnLightClicked()
+    {
+    }
+}
