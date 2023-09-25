@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -6,6 +7,14 @@ public class BookQuest : Quest
     // Array to hold references to all BookPlaceChecker instances in the game
     private BookPlaceChecker[] _bookCheckers;
     private bool _questCompleted = false;
+    private TMP_Text _UItext;
+
+    private void OnEnable()
+    {
+        GameObject missionText = GameObject.Find("MissionText");
+        if (missionText != null) _UItext = missionText.GetComponent<TMP_Text>();
+        if (_UItext != null) _UItext.text = "Place the books in the right place";
+    }
 
     override public void ActivateQuest()
     {
