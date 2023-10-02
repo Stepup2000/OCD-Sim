@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 6690721058208455380}
   - component: {fileID: 2478757202922824502}
   - component: {fileID: 669457579338900696}
+  - component: {fileID: 23917146278194821}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -169,6 +170,19 @@ MonoBehaviour:
   m_LocomotionProvider: {fileID: 936324266099784344}
   m_MinHeight: 0
   m_MaxHeight: Infinity
+--- !u!114 &23917146278194821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538718599062309109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8138eccf9dd8940a778e8085c8b76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepInterval: 0.5
 --- !u!1 &631292631389253936
 GameObject:
   m_ObjectHideFlags: 0
