@@ -45,6 +45,9 @@ public class LevelManager : MonoBehaviour
 
     public void LoadLevel(string levelName)
     {
+        SceneManager.LoadScene(levelName);
+
+        /*
         // Check if the scene exists in the build settings
         if (SceneExists(levelName))
         {
@@ -54,6 +57,12 @@ public class LevelManager : MonoBehaviour
         {
             Debug.LogError("Scene '" + levelName + "' does not exist in the build settings.");
         }
+        */
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     private bool SceneExists(string sceneName)

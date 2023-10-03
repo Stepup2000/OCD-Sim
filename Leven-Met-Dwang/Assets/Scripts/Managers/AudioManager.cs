@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
         AudioClip audioClip = Resources.Load<AudioClip>(soundName);
         if (audioClip == null)
         {
-            Debug.Log("Failed");
+            Debug.Log("AudioFile not found");
             return;
         }
 
