@@ -6160,8 +6160,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 7344794756974244651}
         m_TargetAssemblyTypeName: ClickLight, Assembly-CSharp
-        m_MethodName: ClickTheLight
-        m_Mode: 1
+        m_MethodName: OnHoverEntered
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

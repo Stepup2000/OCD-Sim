@@ -20,7 +20,7 @@ public class FootstepSoundPlayer : MonoBehaviour
             if (timeSinceLastStep >= footstepInterval)
             {
                 // Play the footstep sound
-                AudioManager.Instance.PlaySound("Test");
+                AudioManager.Instance.PlaySound("Footstep");
                 timeSinceLastStep = 0f; // Reset the timer
             }
         }
