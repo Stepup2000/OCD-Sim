@@ -32,6 +32,7 @@ public class QuestManager : MonoBehaviour
         {
             _currentQuest = Instantiate<Quest>(_questArray[_currentQuestIndex], transform.position, Quaternion.identity);
             _currentQuest.ActivateQuest();
+            _currentQuest.transform.SetParent(this.transform);
         }
         else Debug.Log("No quest available");        
     }

@@ -11,9 +11,24 @@ public class BookQuest : Quest
 
     private void OnEnable()
     {
+        SetUI();
+        ChangeUI();
+    }
+
+    private void SetUI()
+    {
         GameObject missionText = GameObject.Find("MissionText");
         if (missionText != null) _UItext = missionText.GetComponent<TMP_Text>();
+    }
+
+    override public void ChangeUI()
+    {
         if (_UItext != null) _UItext.text = "Place the books in the right place";
+        else
+        {
+            SetUI();
+            Invoke("ChangeUI", 1f);
+        }
     }
 
     override public void ActivateQuest()

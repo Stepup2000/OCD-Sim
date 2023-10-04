@@ -54,9 +54,9 @@ public class AudioManager : MonoBehaviour
     }
 
     // Plays one random sound out of a given array
-    public void PlayRandomSound(string[] soundNames)
+    public void PlayRandomSound(string[] soundNames, float lowerPitch = 1.0f, float higherPitch = 1.0f)
     {
         int number = Random.Range(0, soundNames.Length);
-        PlaySound(soundNames[number]);
+        PlaySound(soundNames[number], lowerPitch, higherPitch);
     }
 }

@@ -30,8 +30,9 @@ public class BookPlaceChecker : MonoBehaviour
                     // The book is roughly aligned with the checker within the allowed error
                     bookIsPlaced = true;
                     bookTransform.position = new Vector3(transform.position.x, bookTransform.position.y, transform.position.z);
-                    bookTransform.rotation = Quaternion.identity;
+                    bookTransform.rotation = RoundRotationToNearest90Degrees(bookTransform.rotation);
                     book.StopMovement();
+                    AudioManager.Instance.PlaySound("BookSound");
                     Debug.Log("Position corrected");
                 }
                 else
@@ -43,6 +44,13 @@ public class BookPlaceChecker : MonoBehaviour
         }
     }
 
+    // Function to round a rotation to the nearest 90 degrees
+    Quaternion RoundRotationToNearest90Degrees(Quaternion rotation)
+    {
+        float angle = Quaternion.Angle(rotation, Quaternion.identity);
+        int steps = Mathf.RoundToInt(angle / 90.0f);
+        return Quaternion.Euler(0, 90.0f * steps, 0);
+    }
 
     // Function to check if a Transform is roughly aligned with another Transform within a certain error margin
     bool IsAlignedWithChecker(Transform bookTransform, Transform checkerTransform, float allowedError)

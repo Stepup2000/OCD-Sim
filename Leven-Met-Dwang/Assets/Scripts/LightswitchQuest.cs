@@ -11,10 +11,11 @@ public class LightswitchQuest : Quest
 
     private void OnEnable()
     {
-        GameObject missionText = GameObject.Find("MissionText");
-        if (missionText != null) _UItext = missionText.GetComponent<TMP_Text>();
+        SetUI();
         EventBus<OnLightClicked>.Subscribe(ReduceClickCounter);
+        ChangeUI();
     }
+        
 
     public void OnDisable()
     {
@@ -26,15 +27,25 @@ public class LightswitchQuest : Quest
         if (neededClicks > 0)
         {
             neededClicks--;
-            UpdateText();
+            ChangeUI();
             CheckQuestCompletion();
         }
     }
 
-    public void UpdateText()
+    private void SetUI()
+    {
+        GameObject missionText = GameObject.Find("MissionText");
+        if (missionText != null) _UItext = missionText.GetComponent<TMP_Text>();
+    }
+
+    override public void ChangeUI()
     {
         if (_UItext != null) _UItext.text = "Click the light " + neededClicks + " Times";
-        Debug.Log("TextUpdated");
+        else
+        {
+            SetUI();
+            Invoke("ChangeUI", 1f);
+        }        
     }
 
     public override void ActivateQuest()

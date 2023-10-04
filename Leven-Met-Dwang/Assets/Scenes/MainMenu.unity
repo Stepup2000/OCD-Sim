@@ -763,6 +763,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
+        type: 3}
+      propertyPath: _questArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 575525474939421248, guid: 23e12656b7c865547ae7a949f76ed0ca,
+        type: 3}
+    - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
+        type: 3}
+      propertyPath: _questArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 879970445739519542, guid: e958dcab2bc26b04aaa20d4a2a65ed6c,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -844,7 +856,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7224560327635422407, guid: ab306e8806191f047a7a89d379aec8f7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab306e8806191f047a7a89d379aec8f7, type: 3}
