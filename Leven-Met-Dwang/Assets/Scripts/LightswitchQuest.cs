@@ -6,12 +6,10 @@ using TMPro;
 public class LightswitchQuest : Quest
 {
     [SerializeField] private int neededClicks = 8;
-    private TMP_Text _UItext;
     private bool _questCompleted = false;
 
     private void OnEnable()
     {
-        SetUI();
         EventBus<OnLightClicked>.Subscribe(ReduceClickCounter);
         ChangeUI();
     }
@@ -32,20 +30,9 @@ public class LightswitchQuest : Quest
         }
     }
 
-    private void SetUI()
-    {
-        GameObject missionText = GameObject.Find("MissionText");
-        if (missionText != null) _UItext = missionText.GetComponent<TMP_Text>();
-    }
-
     override public void ChangeUI()
     {
-        if (_UItext != null) _UItext.text = "Click the light " + neededClicks + " Times";
-        else
-        {
-            SetUI();
-            Invoke("ChangeUI", 1f);
-        }        
+        EventBus<OnUIChange>.Publish(new OnUIChange("Click the light " + neededClicks + " Times"));
     }
 
     public override void ActivateQuest()

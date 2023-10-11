@@ -13,6 +13,6 @@ public class VoicesPlayer : MonoBehaviour
 
     private void PlayRandomSound()
     {
-        AudioManager.Instance.PlayRandomSound(_sounds, 0.9f, 1.1f);
+        AudioManager.Instance.PlayRandomSound(_sounds, 0.95f, 1.05f);
     }
 }

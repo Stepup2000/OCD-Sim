@@ -35,3 +35,19 @@ public class OnLightClicked : Event
     {
     }
 }
+
+public class OnAllQuestsComplete : Event
+{
+    public OnAllQuestsComplete()
+    {
+    }
+}
+
+public class OnUIChange : Event
+{
+    public readonly string value;
+    public OnUIChange(string newValue)
+    {
+        value = newValue;
+    }
+}
