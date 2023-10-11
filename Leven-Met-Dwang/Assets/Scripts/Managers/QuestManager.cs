@@ -34,9 +34,12 @@ public class QuestManager : MonoBehaviour
             _currentQuest.ActivateQuest();
             _currentQuest.transform.SetParent(this.transform);
         }
-        else Debug.Log("No quest available");
-        EventBus<OnAllQuestsComplete>.Publish(new OnAllQuestsComplete());
-        EventBus<OnUIChange>.Publish(new OnUIChange("Go through the door"));
+        else
+        {
+            Debug.Log("No quest available");
+            EventBus<OnAllQuestsComplete>.Publish(new OnAllQuestsComplete());
+            EventBus<OnUIChange>.Publish(new OnUIChange("Go through the door"));
+        }
     }
 
     private void FinishCurrentQuest(OnQuestComplete questCompleteEvent)

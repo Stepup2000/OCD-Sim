@@ -7,10 +7,14 @@ public class IntroController : MonoBehaviour
     [SerializeField] private string _soundName;
     [SerializeField] private int _doorSpawnDuration = 15;
     [SerializeField] private GameObject _door;
+    [SerializeField] private Canvas _canvas;
+
+    private int toggleCount = 0;
 
     private void Start()
     {
         _door.gameObject.SetActive(false);
+        if (_canvas != null) _canvas.gameObject.SetActive(false);
         AudioManager.Instance.PlaySound(_soundName);
         Invoke("SpawnDoor", _doorSpawnDuration);
     }
@@ -28,5 +32,20 @@ public class IntroController : MonoBehaviour
     private void SpawnAlarmClock()
     {
         AudioManager.Instance.PlaySound("AlarmClock");
+        InvokeRepeating("ToggleAlarmClock", 0.95f, 0.5f);
+    }
+
+    private void ToggleAlarmClock()
+    {
+        if (_canvas != null && toggleCount < 20)
+        {
+            _canvas.gameObject.SetActive(!_canvas.gameObject.activeSelf);
+            toggleCount++;
+
+            if (toggleCount >= 20)
+            {
+                CancelInvoke("ToggleAlarmClock"); // Stop the repeating function
+            }
+        }
     }
 }
