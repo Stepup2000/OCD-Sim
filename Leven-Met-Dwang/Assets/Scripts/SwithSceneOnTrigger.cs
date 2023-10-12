@@ -8,6 +8,9 @@ public class SwithSceneOnTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        LevelManager.Instance.LoadLevel(_sceneName);
+        if (other.CompareTag("Player"))
+        {
+            LevelManager.Instance.LoadLevel(_sceneName);
+        }
     }
 }
