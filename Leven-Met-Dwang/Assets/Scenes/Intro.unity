@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundName: Intro
-  _doorSpawnDuration: 1
+  _doorSpawnDuration: 35
   _door: {fileID: 392042243}
   _canvas: {fileID: 1444485537}
 --- !u!4 &570783656
