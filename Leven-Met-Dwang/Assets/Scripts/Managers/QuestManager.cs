@@ -33,6 +33,7 @@ public class QuestManager : MonoBehaviour
             _currentQuest = Instantiate<Quest>(_questArray[_currentQuestIndex], transform.position, Quaternion.identity);
             _currentQuest.ActivateQuest();
             _currentQuest.transform.SetParent(this.transform);
+            EventBus<OnQuestStart>.Publish(new OnQuestStart(_currentQuest.questName));
         }
         else
         {

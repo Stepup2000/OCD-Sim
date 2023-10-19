@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Quest : MonoBehaviour
 {
+    [SerializeField] public string questName;
     public abstract void ChangeUI();
     public abstract void ActivateQuest();
     public abstract void DeactivateQuest();

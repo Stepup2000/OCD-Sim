@@ -22,12 +22,19 @@ public class EventBus<T> where T : Event
     }
 }
 
-public class OnQuestComplete : Event
+public class OnQuestStart : Event
 {
     public readonly string value;
-    public OnQuestComplete(string newValue)
+    public OnQuestStart(string newValue)
     {
         value = newValue;
+    }
+}
+
+public class OnQuestComplete : Event
+{
+    public OnQuestComplete()
+    {
     }
 }
 

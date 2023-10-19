@@ -54,7 +54,7 @@ public class BookQuest : Quest
         // Now you can use the 'allCheckersFilled' boolean to determine if all checkers are filled
         if (allCheckersFilled && _questCompleted == false)
         {
-            EventBus<OnQuestComplete>.Publish(new OnQuestComplete("Books"));
+            EventBus<OnQuestComplete>.Publish(new OnQuestComplete());
             _questCompleted = true;
         }
     }

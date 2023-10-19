@@ -12,7 +12,7 @@ public class ChangeColorForQuest : MonoBehaviour
 
     private void OnEnable()
     {
-        EventBus<OnQuestComplete>.Subscribe(CheckColorChange);
+        EventBus<OnQuestStart>.Subscribe(CheckColorChange);
         _myRenderer = GetComponent<Renderer>();
         if (_myRenderer != null) _oldMaterial = _myRenderer.material;
     }
@@ -20,7 +20,7 @@ public class ChangeColorForQuest : MonoBehaviour
 
     public void OnDisable()
     {
-        EventBus<OnQuestComplete>.UnSubscribe(CheckColorChange);
+        EventBus<OnQuestStart>.UnSubscribe(CheckColorChange);
     }
 
     private bool CheckForNullPointers()
@@ -30,12 +30,12 @@ public class ChangeColorForQuest : MonoBehaviour
         return trueOrFalse;
     }
 
-    private void CheckColorChange(OnQuestComplete onQuestComplete)
+    private void CheckColorChange(OnQuestStart onQuestStart)
     {
         if (CheckForNullPointers() == true) return;
 
-        if (onQuestComplete.value == _questName) _myRenderer.material = _newMaterial;
-        else RevertColorChanges();
+        if (onQuestStart.value == _questName) RevertColorChanges();
+        else _myRenderer.material = _newMaterial;
     }
 
     public void RevertColorChanges()

@@ -50,7 +50,7 @@ public class LightswitchQuest : Quest
     {
         if (neededClicks < 1 && _questCompleted == false)
         {
-            EventBus<OnQuestComplete>.Publish(new OnQuestComplete("Lights"));
+            EventBus<OnQuestComplete>.Publish(new OnQuestComplete());
             _questCompleted = true;
         }
     }

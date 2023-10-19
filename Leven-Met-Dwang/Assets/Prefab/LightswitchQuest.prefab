@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5752340c22f97a64c9481f3b0e86e880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questName: Lights
   neededClicks: 8
-  _UItext: {fileID: 0}
