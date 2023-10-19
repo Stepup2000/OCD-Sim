@@ -24,8 +24,10 @@ public class EventBus<T> where T : Event
 
 public class OnQuestComplete : Event
 {
-    public OnQuestComplete()
+    public readonly string value;
+    public OnQuestComplete(string newValue)
     {
+        value = newValue;
     }
 }
 
