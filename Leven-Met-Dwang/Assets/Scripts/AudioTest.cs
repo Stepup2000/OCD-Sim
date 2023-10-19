@@ -12,7 +12,7 @@ public class AudioTest : MonoBehaviour
 
     private void PlaySound()
     {
-        AudioManager.current.PlaySound("Test", 0.8f, 1.2f);
+        AudioManager.Instance.PlaySound("Test", 0.8f, 1.2f);
         Debug.Log("AudioPlayed");
     }
 }
