@@ -58,5 +58,13 @@ public class OnUIChange : Event
     public OnUIChange(string newValue)
     {
         value = newValue;
+        Debug.Log(newValue);
+    }
+}
+
+public class EnteredRoom : Event
+{
+    public EnteredRoom()
+    {
     }
 }

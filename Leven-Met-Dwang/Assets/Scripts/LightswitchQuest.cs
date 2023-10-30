@@ -11,7 +11,6 @@ public class LightswitchQuest : Quest
     private void OnEnable()
     {
         EventBus<OnLightClicked>.Subscribe(ReduceClickCounter);
-        ChangeUI();
     }
         
 
@@ -38,6 +37,7 @@ public class LightswitchQuest : Quest
     public override void ActivateQuest()
     {
         Debug.Log("Quest Started");
+        ChangeUI();
     }
 
     public override void DeactivateQuest()

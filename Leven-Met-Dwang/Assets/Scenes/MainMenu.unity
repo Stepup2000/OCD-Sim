@@ -1268,13 +1268,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
+      propertyPath: _questArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
+        type: 3}
       propertyPath: _questArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 6025561127761000266, guid: 192f0cdd6a2e3074ab7c2fd88ec67355,
+        type: 3}
+    - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
+        type: 3}
+      propertyPath: _questArray.Array.data[1]
       value: 
       objectReference: {fileID: 575525474939421248, guid: 23e12656b7c865547ae7a949f76ed0ca,
         type: 3}
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
-      propertyPath: _questArray.Array.data[1]
+      propertyPath: _questArray.Array.data[2]
       value: 
       objectReference: {fileID: 879970445739519542, guid: e958dcab2bc26b04aaa20d4a2a65ed6c,
         type: 3}

@@ -13,7 +13,7 @@ public class ChangeColorForQuest : MonoBehaviour
     private void OnEnable()
     {
         EventBus<OnQuestStart>.Subscribe(CheckColorChange);
-        _myRenderer = GetComponent<Renderer>();
+        _myRenderer = GetComponentInChildren<Renderer>();
         if (_myRenderer != null) _oldMaterial = _myRenderer.material;
     }
 
@@ -34,8 +34,9 @@ public class ChangeColorForQuest : MonoBehaviour
     {
         if (CheckForNullPointers() == true) return;
 
-        if (onQuestStart.value == _questName) RevertColorChanges();
-        else _myRenderer.material = _newMaterial;
+        if (onQuestStart.value == _questName) _myRenderer.material = _newMaterial;
+        else RevertColorChanges();
+        Debug.Log(onQuestStart.value + "&" + _questName);
     }
 
     public void RevertColorChanges()
