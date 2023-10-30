@@ -68,3 +68,10 @@ public class EnteredRoom : Event
     {
     }
 }
+
+public class WashHand : Event
+{
+    public WashHand()
+    {
+    }
+}
