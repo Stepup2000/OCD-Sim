@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class ClickTap : MonoBehaviour
 {
-    [SerializeField] private float _cooldownDuration = 0.5f;
+    [SerializeField] private float _cooldownDuration = 0.25f;
     [SerializeField] private GameObject _waterSteam;
     private float _currentCooldown;
+
+    private void Start()
+    {
+        ToggleWater();
+    }
 
     private void Update()
     {
@@ -17,22 +22,13 @@ public class ClickTap : MonoBehaviour
         }
     }
 
-    public void SendLightClickEvent()
-    {
-        // Check if the cooldown is still active.
-        if (_currentCooldown <= 0)
-        {
-            // If not, publish the event and play the sound.
-            EventBus<WashHand>.Publish(new WashHand());
-            AudioManager.Instance.PlaySound("LightSwitch");
-
-            // Reset the cooldown timer.
-            _currentCooldown = _cooldownDuration;
-        }
-    }
-
     public void ToggleWater()
     {
-        if (_waterSteam != null) _waterSteam.SetActive(!_waterSteam.activeSelf);
+        // Check if the cooldown is still active.
+        if (_currentCooldown <= 0 && _waterSteam != null)
+        {
+            _waterSteam.SetActive(!_waterSteam.activeSelf);
+            _currentCooldown = _cooldownDuration;
+        }
     }
 }

@@ -20,7 +20,7 @@ public class WashQuest : Quest
 
     override public void ChangeUI()
     {
-        EventBus<OnUIChange>.Publish(new OnUIChange("Walk into the room"));
+        EventBus<OnUIChange>.Publish(new OnUIChange("Was je handen"));
     }
 
     public override void ActivateQuest()

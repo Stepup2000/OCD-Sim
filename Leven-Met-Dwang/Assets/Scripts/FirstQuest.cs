@@ -21,7 +21,7 @@ public class FirstQuest : Quest
 
     override public void ChangeUI()
     {
-        EventBus<OnUIChange>.Publish(new OnUIChange("Walk into the room"));
+        EventBus<OnUIChange>.Publish(new OnUIChange("Loop naar de woonkamer"));
     }
 
     public override void ActivateQuest()

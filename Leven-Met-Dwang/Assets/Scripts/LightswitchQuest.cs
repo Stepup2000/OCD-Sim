@@ -31,7 +31,7 @@ public class LightswitchQuest : Quest
 
     override public void ChangeUI()
     {
-        EventBus<OnUIChange>.Publish(new OnUIChange("Click the light " + neededClicks + " Times"));
+        EventBus<OnUIChange>.Publish(new OnUIChange("Klik " + neededClicks + " keer op de lichtknop"));
     }
 
     public override void ActivateQuest()

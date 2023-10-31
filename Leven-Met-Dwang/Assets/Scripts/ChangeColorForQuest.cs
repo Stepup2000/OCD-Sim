@@ -36,7 +36,6 @@ public class ChangeColorForQuest : MonoBehaviour
 
         if (onQuestStart.value == _questName) _myRenderer.material = _newMaterial;
         else RevertColorChanges();
-        Debug.Log(onQuestStart.value + "&" + _questName);
     }
 
     public void RevertColorChanges()

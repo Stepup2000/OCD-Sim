@@ -17,7 +17,7 @@ public class BookQuest : Quest
 
     override public void ChangeUI()
     {
-        EventBus<OnUIChange>.Publish(new OnUIChange("Place the books in the right place"));
+        EventBus<OnUIChange>.Publish(new OnUIChange("Plaats de boeken op de juiste plek"));
     }
 
     override public void ActivateQuest()

@@ -16,8 +16,8 @@ public class SetPokeToFingerAttachPoint : MonoBehaviour
 
     private void SetPokeAttachPoint()
     {
-        if (PokeAttachPoint == null) { Debug.Log("PokeAttackpoint is null"); return; }
-        if (_xrPokeInteractor == null) { Debug.Log("XR poke interactor is null"); return; }
+        if (PokeAttachPoint == null) { return; }
+        if (_xrPokeInteractor == null) {return; }
 
         _xrPokeInteractor.attachTransform = PokeAttachPoint;
     }
