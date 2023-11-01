@@ -1269,7 +1269,7 @@ PrefabInstance:
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
       propertyPath: _questArray.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
@@ -1281,29 +1281,35 @@ PrefabInstance:
         type: 3}
       propertyPath: _questArray.Array.data[1]
       value: 
-      objectReference: {fileID: 8453054691677090366, guid: bf251431fc4d3ba4aae52857508af389,
+      objectReference: {fileID: 4725598690266770143, guid: 95373d0f9074ebf4fa30aaa21a71a591,
         type: 3}
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
       propertyPath: _questArray.Array.data[2]
       value: 
-      objectReference: {fileID: 575525474939421248, guid: 23e12656b7c865547ae7a949f76ed0ca,
+      objectReference: {fileID: 8453054691677090366, guid: bf251431fc4d3ba4aae52857508af389,
         type: 3}
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
       propertyPath: _questArray.Array.data[3]
       value: 
-      objectReference: {fileID: 8453054691677090366, guid: bf251431fc4d3ba4aae52857508af389,
+      objectReference: {fileID: 575525474939421248, guid: 23e12656b7c865547ae7a949f76ed0ca,
         type: 3}
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
       propertyPath: _questArray.Array.data[4]
       value: 
-      objectReference: {fileID: 879970445739519542, guid: e958dcab2bc26b04aaa20d4a2a65ed6c,
+      objectReference: {fileID: 8453054691677090366, guid: bf251431fc4d3ba4aae52857508af389,
         type: 3}
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
       propertyPath: _questArray.Array.data[5]
+      value: 
+      objectReference: {fileID: 879970445739519542, guid: e958dcab2bc26b04aaa20d4a2a65ed6c,
+        type: 3}
+    - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
+        type: 3}
+      propertyPath: _questArray.Array.data[6]
       value: 
       objectReference: {fileID: 8453054691677090366, guid: bf251431fc4d3ba4aae52857508af389,
         type: 3}

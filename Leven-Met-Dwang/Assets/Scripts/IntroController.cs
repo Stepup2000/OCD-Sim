@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class IntroController : MonoBehaviour
 {
-    [SerializeField] private string _soundName;
     [SerializeField] private int _doorSpawnDuration = 15;
     [SerializeField] private GameObject _door;
     [SerializeField] private Canvas _canvas;
@@ -15,7 +14,7 @@ public class IntroController : MonoBehaviour
     {
         _door.gameObject.SetActive(false);
         if (_canvas != null) _canvas.gameObject.SetActive(false);
-        AudioManager.Instance.PlaySound(_soundName);
+        AudioManager.Instance.PlaySound("Intro");
         Invoke("SpawnDoor", _doorSpawnDuration);
     }
 
@@ -44,7 +43,7 @@ public class IntroController : MonoBehaviour
 
             if (toggleCount >= 20)
             {
-                CancelInvoke("ToggleAlarmClock"); // Stop the repeating function
+                CancelInvoke("ToggleAlarmClock");
             }
         }
     }
