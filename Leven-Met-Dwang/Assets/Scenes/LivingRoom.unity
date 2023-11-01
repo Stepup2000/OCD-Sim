@@ -1186,7 +1186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &508960060
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5556,17 +5556,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sounds:
-  - BookWrong_1
-  - BookWrong_2
-  - BookWrong_3
-  - CheckLightSwitch
-  - Count
-  - CountFamily
-  - DontBeToLate
-  - LightSwitch_Voice
-  - NotRight
-  - QuickQuickQuick
-  - ToLate
+  - Boeken 4 recht (mp3cut.net)
+  - Boeken 9 niet werken (mp3cut.net)
+  - Boeken opdracht (mp3cut.net)
   _soundCooldown: 3
 --- !u!224 &1963427860 stripped
 RectTransform:
