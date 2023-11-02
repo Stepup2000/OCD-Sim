@@ -4,30 +4,24 @@ using UnityEngine;
 
 public class FootstepSoundPlayer : MonoBehaviour
 {
-    private float timeSinceLastStep; // Time counter for footsteps
+    public float stepThreshold = 1.0f; // Set a distance threshold for footstep sounds
+    private Vector3 lastPosition;
 
-    public float footstepInterval = 0.5f; // Time interval between footsteps
-
-    private void Update()
+    void Start()
     {
-        // Check if the object is moving (you can modify this condition as needed)
-        if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f)
-        {
-            // Update the time counter
-            timeSinceLastStep += Time.deltaTime;
+        lastPosition = transform.position; // Record initial position
+    }
 
-            // Check if it's time to play another footstep sound
-            if (timeSinceLastStep >= footstepInterval)
-            {
-                // Play the footstep sound
-                AudioManager.Instance.PlaySound("Footstep");
-                timeSinceLastStep = 0f; // Reset the timer
-            }
-        }
-        else
+    void Update()
+    {
+        // Calculate the distance moved since the last frame
+        float distanceMoved = Vector3.Distance(transform.position, lastPosition);
+
+        // Check if the distance moved exceeds the threshold
+        if (distanceMoved >= stepThreshold)
         {
-            // Reset the timer if the object is not moving
-            timeSinceLastStep = footstepInterval;
+            AudioManager.Instance.PlaySound("Footstep"); // Play footstep sound
+            lastPosition = transform.position; // Update last position
         }
     }
 }
