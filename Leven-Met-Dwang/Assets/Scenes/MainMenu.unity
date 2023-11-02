@@ -1269,7 +1269,7 @@ PrefabInstance:
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
       propertyPath: _questArray.Array.size
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}

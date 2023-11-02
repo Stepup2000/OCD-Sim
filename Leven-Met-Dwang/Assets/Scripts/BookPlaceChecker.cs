@@ -21,7 +21,6 @@ public class BookPlaceChecker : MonoBehaviour
                 if (IsAlignedWithChecker(bookTransform, transform, 0.1f))
                 {
                     bookIsPlaced = true;
-                    Debug.Log("True");
                     return;
                 }
                 else

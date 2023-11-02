@@ -4,28 +4,34 @@ using UnityEngine;
 
 public class WaterTrigger : MonoBehaviour
 {
-    [SerializeField] private float _cooldownDuration = 0.25f;
-    private float _currentCooldown;
+    [SerializeField] private float _triggerDuration = 3.0f; // Time to trigger the event
+    private bool _isInsideTrigger = false;
+    private float _timeInsideTrigger = 0f;
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the cooldown is still active.
-        if (_currentCooldown <= 0)
-        {
-            // If not, publish the event and play the sound.
-            EventBus<WashHand>.Publish(new WashHand());
+        _isInsideTrigger = true; // Set the flag to indicate the trigger area is entered.
+    }
 
-            // Reset the cooldown timer.
-            _currentCooldown = _cooldownDuration;
-        }
+    private void OnTriggerExit(Collider other)
+    {
+        _isInsideTrigger = false; // Set the flag to indicate the trigger area is exited.
+        _timeInsideTrigger = 0f; // Reset the time spent inside the trigger.
     }
 
     private void Update()
     {
-        // Update the cooldown timer.
-        if (_currentCooldown > 0)
+        if (_isInsideTrigger)
         {
-            _currentCooldown -= Time.deltaTime;
+            _timeInsideTrigger += Time.deltaTime;
+
+            // Check if the time inside the trigger is more than the specified duration.
+            if (_timeInsideTrigger >= _triggerDuration)
+            {
+                // Trigger the event and reset the timer.
+                EventBus<WashHand>.Publish(new WashHand());
+                _timeInsideTrigger = 0f;
+            }
         }
     }
 }

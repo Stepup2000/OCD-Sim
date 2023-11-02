@@ -5,6 +5,8 @@ using UnityEngine;
 public class IntroController : MonoBehaviour
 {
     [SerializeField] private int _doorSpawnDuration = 15;
+    [SerializeField] private int _toggleAmount = 12;
+    [SerializeField] private int _alarmDelay = 4;
     [SerializeField] private GameObject _door;
     [SerializeField] private Canvas _canvas;
 
@@ -24,24 +26,24 @@ public class IntroController : MonoBehaviour
         {
             _door.gameObject.SetActive(true);
             AudioManager.Instance.PlaySound("Explosion");
-            Invoke("SpawnAlarmClock", 5f);
+            Invoke("SpawnAlarmClock", _alarmDelay);
         }
     }
 
     private void SpawnAlarmClock()
     {
         AudioManager.Instance.PlaySound("AlarmClock");
-        InvokeRepeating("ToggleAlarmClock", 0.95f, 0.5f);
+        InvokeRepeating("ToggleAlarmClock", 0.001f, 0.5f);
     }
 
     private void ToggleAlarmClock()
     {
-        if (_canvas != null && toggleCount < 20)
+        if (_canvas != null && toggleCount < _toggleAmount)
         {
             _canvas.gameObject.SetActive(!_canvas.gameObject.activeSelf);
             toggleCount++;
 
-            if (toggleCount >= 20)
+            if (toggleCount >= _toggleAmount)
             {
                 CancelInvoke("ToggleAlarmClock");
             }

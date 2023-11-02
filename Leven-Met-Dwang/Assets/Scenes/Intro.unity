@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df5ff8b7b5f0ee448b17a7823b269d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _doorSpawnDuration: 5
+  _doorSpawnDuration: 35
   _door: {fileID: 392042243}
   _canvas: {fileID: 165308905}
 --- !u!4 &570783656

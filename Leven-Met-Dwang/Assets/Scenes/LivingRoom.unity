@@ -7855,7 +7855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd587a18a178f3741a5cec5220a72de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cooldownDuration: 0.25
+  _triggerDuration: 3
 --- !u!65 &1058901953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9472,6 +9472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cooldownDuration: 0.5
   _waterSteam: {fileID: 926661388}
+  _loopSound: {fileID: 0}
 --- !u!65 &1627476932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10465,6 +10466,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4120435971999244531, guid: ab306e8806191f047a7a89d379aec8f7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.059
+      objectReference: {fileID: 0}
     - target: {fileID: 7224560327635422407, guid: ab306e8806191f047a7a89d379aec8f7,
         type: 3}
       propertyPath: m_IsActive
@@ -10507,11 +10513,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bookSounds:
-  - Boeken 4 recht (mp3cut.net)
+  - Book_1
+  - Book_2
+  - Book_3
+  - Book_4
+  - Book_5
+  - Book_6
+  - Book_7
+  - Book_8
   _lightSounds:
-  - Boeken 9 niet werken (mp3cut.net)
+  - Light_1
+  - Light_2
+  - Light_3
+  - Light_4
+  - Light_5
+  - Light_6
+  - Light_7
+  - Light_8
   _washSounds:
-  - Boeken opdracht (mp3cut.net)
+  - Crane_1
+  - Crane_2
+  - Crane_3
+  - Crane_4
+  - Crane_5
+  - Crane_6
+  - Crane_7
+  - Crane_8
   _soundCooldown: 4
 --- !u!224 &1963427860 stripped
 RectTransform:

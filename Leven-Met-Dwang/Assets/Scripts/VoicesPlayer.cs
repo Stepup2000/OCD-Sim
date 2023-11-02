@@ -16,6 +16,7 @@ public class VoicesPlayer : MonoBehaviour
     private void OnEnable()
     {
         EventBus<OnQuestStart>.Subscribe(OnQuestStarted);
+        InvokeRepeating("PlayClockSound", 9, 9);
     }
 
     public void OnDisable()
@@ -26,7 +27,7 @@ public class VoicesPlayer : MonoBehaviour
     private void Start()
     {
         _subjectSounds.Add("Book", _bookSounds);
-        _subjectSounds.Add("Light", _lightSounds);
+        _subjectSounds.Add("Lights", _lightSounds);
         _subjectSounds.Add("Wash", _washSounds);
 
         InvokeRepeating("PlayRandomSound", _soundCooldown, _soundCooldown);
@@ -44,6 +45,11 @@ public class VoicesPlayer : MonoBehaviour
             string[] selectedSounds = _subjectSounds[lastSubject];
             AudioManager.Instance.PlayRandomSound(selectedSounds, 0.95f, 1.05f);
         }
+    }
+
+    private void PlayClockSound()
+    {
+        AudioManager.Instance.PlayLongSound("Clock");
     }
 }
 

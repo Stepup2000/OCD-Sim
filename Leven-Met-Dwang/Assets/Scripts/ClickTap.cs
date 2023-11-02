@@ -6,11 +6,17 @@ public class ClickTap : MonoBehaviour
 {
     [SerializeField] private float _cooldownDuration = 0.25f;
     [SerializeField] private GameObject _waterSteam;
+    [SerializeField] private AudioClip _loopSound; // Sound to play
+    private AudioSource _audioSource; // AudioSource component reference
     private float _currentCooldown;
+    private bool _isOn = true;
 
     private void Start()
     {
         ToggleWater();
+        _audioSource = gameObject.AddComponent<AudioSource>(); // Add AudioSource component
+        _audioSource.loop = true;
+        _audioSource.clip = _loopSound;
     }
 
     private void Update()
@@ -27,8 +33,28 @@ public class ClickTap : MonoBehaviour
         // Check if the cooldown is still active.
         if (_currentCooldown <= 0 && _waterSteam != null)
         {
-            _waterSteam.SetActive(!_waterSteam.activeSelf);
+            _isOn = !_isOn;
+            _waterSteam.SetActive(_isOn);
             _currentCooldown = _cooldownDuration;
+
+            if (_isOn)
+            {
+                // Play loop sound
+                PlayLoopSound();
+                // Start repeating the sound every second
+                InvokeRepeating("PlayLoopSound", 0f, 1.45f);
+            }
+            else
+            {
+                // Stop the sound when water is turned off
+                CancelInvoke("PlayLoopSound");
+            }
         }
+    }
+
+    // Method to play the loop sound every second
+    private void PlayLoopSound()
+    {
+        AudioManager.Instance.PlaySound("CraneSound");
     }
 }

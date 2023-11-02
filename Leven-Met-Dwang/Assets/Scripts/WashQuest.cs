@@ -20,7 +20,7 @@ public class WashQuest : Quest
 
     override public void ChangeUI()
     {
-        EventBus<OnUIChange>.Publish(new OnUIChange("Was je handen"));
+        EventBus<OnUIChange>.Publish(new OnUIChange("Was je handen voor 3 seconden"));
     }
 
     public override void ActivateQuest()

@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questName: Message
-  _questDuration: 3
+  _questDuration: 5
   _canvasName: Reminder
