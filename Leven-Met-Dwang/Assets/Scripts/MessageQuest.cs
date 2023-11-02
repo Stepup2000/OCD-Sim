@@ -8,12 +8,12 @@ public class MessageQuest : Quest
 {
     [SerializeField] private int _questDuration = 10;
     [SerializeField] string _canvasName;
-    private Image _messageImage;
+    private Image _messageImage = null;
     private bool _questCompleted = false;
 
     private void OnEnable()
     {
-        Invoke("CompleteQuestAfterDelay", 10f);
+        Invoke("CompleteQuest", _questDuration);
         Invoke("ChangeUI", 1f);
         GameObject foundObject = GameObject.Find(_canvasName);
         _messageImage = foundObject.GetComponent<Image>();
@@ -46,24 +46,13 @@ public class MessageQuest : Quest
     {
     }
 
-    private void CompleteQuestAfterDelay()
-    {
-        StartCoroutine(CompleteQuestDelayed());
-    }
-
-    private IEnumerator CompleteQuestDelayed()
-    {
-        yield return new WaitForSeconds(_questDuration);
-        CompleteQuest();
-    }
-
     private void CompleteQuest()
     {
         if (!_questCompleted)
         {
             EventBus<OnQuestComplete>.Publish(new OnQuestComplete());
             _questCompleted = true;
-            CheckQuestCompletion(); // Check for quest completion status
+            CheckQuestCompletion();
             ToggleMessageImage();
         }
     }
@@ -73,7 +62,6 @@ public class MessageQuest : Quest
         if (_messageImage != null)
         {
             _messageImage.enabled = !_messageImage.enabled;
-            Debug.Log("Toggeled");
         }        
     }
 }

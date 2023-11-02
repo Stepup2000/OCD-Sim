@@ -1269,7 +1269,7 @@ PrefabInstance:
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
       propertyPath: _questArray.Array.size
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
         type: 3}
@@ -1312,6 +1312,18 @@ PrefabInstance:
       propertyPath: _questArray.Array.data[6]
       value: 
       objectReference: {fileID: 8453054691677090366, guid: bf251431fc4d3ba4aae52857508af389,
+        type: 3}
+    - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
+        type: 3}
+      propertyPath: _questArray.Array.data[7]
+      value: 
+      objectReference: {fileID: 4725598690266770143, guid: 46787f777fdd3964a9d0afa94029b683,
+        type: 3}
+    - target: {fileID: 6914512782571502000, guid: c46aef194f195c84b8f066b9a02a23c5,
+        type: 3}
+      propertyPath: _questArray.Array.data[8]
+      value: 
+      objectReference: {fileID: 6025561127761000266, guid: 9a6580c738379504ca5d09d195440514,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6785,7 +6797,7 @@ PrefabInstance:
     - target: {fileID: 3696761680813246513, guid: ab306e8806191f047a7a89d379aec8f7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0.085
       objectReference: {fileID: 0}
     - target: {fileID: 3696761680813246513, guid: ab306e8806191f047a7a89d379aec8f7,
         type: 3}

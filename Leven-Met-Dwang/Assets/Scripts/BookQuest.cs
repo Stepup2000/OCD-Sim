@@ -7,7 +7,6 @@ public class BookQuest : Quest
     // Array to hold references to all BookPlaceChecker instances in the game
     private BookPlaceChecker[] _bookCheckers;
     private bool _questCompleted = false;
-    private TMP_Text _UItext;
 
     private void OnEnable()
     {

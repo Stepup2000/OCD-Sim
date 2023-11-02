@@ -719,7 +719,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1608538582685491123, guid: 618b221049819874fbfb6767764ce716,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1370243402}
   m_SourcePrefab: {fileID: 100100000, guid: 618b221049819874fbfb6767764ce716, type: 3}
 --- !u!4 &1370243400 stripped
 Transform:
@@ -727,6 +731,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1370243399}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1370243401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1608538582685491123, guid: 618b221049819874fbfb6767764ce716,
+    type: 3}
+  m_PrefabInstance: {fileID: 1370243399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1370243402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370243401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c93bb0f786b3dc459da8199bb0355f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _newMaterial: {fileID: 2100000, guid: e151f369cef4892448e6a5536567056f, type: 2}
+  _questName: FirstQuest
 --- !u!1 &1621801211
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +898,7 @@ PrefabInstance:
     - target: {fileID: 3696761680813246513, guid: ab306e8806191f047a7a89d379aec8f7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.085
       objectReference: {fileID: 0}
     - target: {fileID: 3696761680813246513, guid: ab306e8806191f047a7a89d379aec8f7,
         type: 3}

@@ -17,7 +17,6 @@ public class WaterTrigger : MonoBehaviour
 
             // Reset the cooldown timer.
             _currentCooldown = _cooldownDuration;
-            Debug.Log("Clean");
         }
     }
 
