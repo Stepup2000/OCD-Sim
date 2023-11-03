@@ -673,7 +673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317195918}
   - component: {fileID: 317195919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355837209}
   - component: {fileID: 355837210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491608068}
   - component: {fileID: 491608069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1021,7 +1021,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495040730}
   - component: {fileID: 495040731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1622,7 +1622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627586260}
   - component: {fileID: 627586261}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2539,7 +2539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 842424141}
   - component: {fileID: 842424142}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9560,7 +9560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1650538795}
   - component: {fileID: 1650538796}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10493,6 +10493,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1963427859}
+    - targetCorrespondingSourceObject: {fileID: 7984527198474915702, guid: ab306e8806191f047a7a89d379aec8f7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1963427863}
   m_SourcePrefab: {fileID: 100100000, guid: ab306e8806191f047a7a89d379aec8f7, type: 3}
 --- !u!1 &1963427858 stripped
 GameObject:
@@ -10546,6 +10550,34 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1963427857}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1963427861 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3685249843235605998, guid: ab306e8806191f047a7a89d379aec8f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1963427857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1963427862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7984527198474915702, guid: ab306e8806191f047a7a89d379aec8f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1963427857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1963427863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963427862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b520ad498ab7c4e9eb905ff94c848f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  player: {fileID: 1963427861}
 --- !u!1 &1967514248
 GameObject:
   m_ObjectHideFlags: 0
@@ -10948,7 +10980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992452651}
   - component: {fileID: 1992452652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21865,7 +21897,7 @@ GameObject:
   - component: {fileID: 1304861080903459242}
   - component: {fileID: 2555048758551505467}
   - component: {fileID: 2984960313146134271}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh109
   m_TagString: Untagged
   m_Icon: {fileID: 0}
