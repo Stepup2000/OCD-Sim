@@ -289,17 +289,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165308902}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029653306}
-  m_LocalPosition: {x: 0, y: 0, z: 0.12969665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.12969673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 152316794}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.996, y: 2.267}
+  m_AnchoredPosition: {x: 2.0819998, y: 2.267}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &392042243
@@ -329,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 392042243}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.000000014901161, z: -0, w: 1}
-  m_LocalPosition: {x: 16.798, y: -0.29999995, z: 8.78476}
+  m_LocalPosition: {x: 15.92, y: -0.29999995, z: 8.78476}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -639,8 +639,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -741623245571686893, guid: 14af3fb05c0bfcd49bc80060396785c5,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: e151f369cef4892448e6a5536567056f, type: 2}
     - target: {fileID: 6199879262498390104, guid: 618b221049819874fbfb6767764ce716,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -651,8 +650,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 4240403238798418602, guid: 14af3fb05c0bfcd49bc80060396785c5,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: e151f369cef4892448e6a5536567056f, type: 2}
     - target: {fileID: 9098500106567097943, guid: 618b221049819874fbfb6767764ce716,
         type: 3}
       propertyPath: m_LocalScale.x
