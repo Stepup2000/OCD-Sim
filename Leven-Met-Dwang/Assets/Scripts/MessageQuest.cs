@@ -62,6 +62,7 @@ public class MessageQuest : Quest
         if (_messageImage != null)
         {
             _messageImage.enabled = !_messageImage.enabled;
+            if (_messageImage.enabled == true) AudioManager.Instance.PlaySound("NotificationSound");
         }        
     }
 }
