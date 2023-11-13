@@ -8714,6 +8714,73 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237024794}
   m_Mesh: {fileID: 3560239335359212031, guid: 14af3fb05c0bfcd49bc80060396785c5, type: 3}
+--- !u!1 &1267615320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267615321}
+  - component: {fileID: 1267615323}
+  - component: {fileID: 1267615322}
+  m_Layer: 0
+  m_Name: NextLevelCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1267615321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267615320}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.82, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543450652404901889}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1267615322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267615320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 159a1a2ee40a2614eb3512a40d2e94b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneName: Outro
+--- !u!65 &1267615323
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267615320}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.6538868, y: 20.60995, z: 9.469738}
+  m_Center: {x: -137.14963, y: 13.374967, z: -86.4792}
 --- !u!65 &1278543863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8747,7 +8814,7 @@ GameObject:
   - component: {fileID: 1293002173}
   - component: {fileID: 1293002172}
   m_Layer: 0
-  m_Name: NextLevelCollider
+  m_Name: BlockExitCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13460,6 +13527,7 @@ Transform:
   - {fileID: 659117182}
   - {fileID: 1419430903}
   - {fileID: 1293002171}
+  - {fileID: 1267615321}
   - {fileID: 374696902}
   - {fileID: 1627476926}
   - {fileID: 2063138393}
