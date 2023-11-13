@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df5ff8b7b5f0ee448b17a7823b269d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _doorSpawnDuration: 1
+  _doorSpawnDuration: 35
   _toggleAmount: 12
   _alarmDelay: 4
   _door: {fileID: 392042243}

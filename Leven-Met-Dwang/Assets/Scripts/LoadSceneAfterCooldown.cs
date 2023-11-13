@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoadSceneAfterCooldown : MonoBehaviour
+public class GoMainMenuAfterCooldown : MonoBehaviour
 {
     [SerializeField] private string _sceneName;
     [SerializeField] private float _cooldown = 0.1f;
@@ -12,7 +12,7 @@ public class LoadSceneAfterCooldown : MonoBehaviour
         Invoke("LoadLevel", _cooldown);   
     }
 
-    public void LoadLevel()
+    private void LoadLevel()
     {
         LevelManager.Instance.LoadLevel(_sceneName);
     }

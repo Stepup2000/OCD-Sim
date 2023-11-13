@@ -9910,14 +9910,14 @@ MonoBehaviour:
       - m_Target: {fileID: 1627476931}
         m_TargetAssemblyTypeName: ClickTap, Assembly-CSharp
         m_MethodName: ToggleWater
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   m_LastHoverExited:
     m_PersistentCalls:
@@ -10001,6 +10001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cooldownDuration: 0.5
+  _autoTurnOffDuration: 10
   _waterSteam: {fileID: 926661388}
   _loopSound: {fileID: 0}
 --- !u!65 &1627476932
