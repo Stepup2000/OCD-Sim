@@ -36,24 +36,25 @@ public class ClickTap : MonoBehaviour
             _isOn = !_isOn;
             _waterSteam.SetActive(_isOn);
             _currentCooldown = _cooldownDuration;
+            AudioManager.Instance.PlaySound("Squeak");
 
             if (_isOn)
             {
                 // Play loop sound
-                PlayLoopSound();
+                PlayWaterSound();
                 // Start repeating the sound every second
-                InvokeRepeating("PlayLoopSound", 0f, 1.45f);
+                InvokeRepeating("PlayWaterSound", 0f, 1.45f);
             }
             else
             {
                 // Stop the sound when water is turned off
-                CancelInvoke("PlayLoopSound");
+                CancelInvoke("PlayWaterSound");
             }
         }
     }
 
     // Method to play the loop sound every second
-    private void PlayLoopSound()
+    private void PlayWaterSound()
     {
         AudioManager.Instance.PlaySound("CraneSound");
     }

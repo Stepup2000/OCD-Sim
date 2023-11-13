@@ -12,10 +12,8 @@ public class VRHeadBlocking : MonoBehaviour
         if (IsPlayerApproachingWall())
         {
             // Restrict the player's movement
-            // Example: You might play a feedback or stop the player from walking further.
-            Debug.Log("Player is approaching the wall!");
+            //Debug.Log("Player is approaching the wall!");
         }
-        // Otherwise, the player is not approaching the wall
     }
 
     bool IsPlayerApproachingWall()
