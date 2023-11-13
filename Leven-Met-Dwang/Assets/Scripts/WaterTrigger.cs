@@ -16,7 +16,6 @@ public class WaterTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         _isInsideTrigger = false; // Set the flag to indicate the trigger area is exited.
-        _timeInsideTrigger = 0f; // Reset the time spent inside the trigger.
     }
 
     private void Update()
