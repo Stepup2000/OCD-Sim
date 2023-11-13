@@ -39,7 +39,7 @@ public class QuestManager : MonoBehaviour
         {
             Debug.Log("No quest available");
             EventBus<OnAllQuestsComplete>.Publish(new OnAllQuestsComplete());
-            EventBus<OnUIChange>.Publish(new OnUIChange("Go through the door"));
+            EventBus<OnUIChange>.Publish(new OnUIChange("Ga door de voordeur"));
         }
     }
 
