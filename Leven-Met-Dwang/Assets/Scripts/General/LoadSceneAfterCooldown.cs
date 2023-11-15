@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GoMainMenuAfterCooldown : MonoBehaviour
 {
+    //Load scene after a x amount of time
     [SerializeField] private string _sceneName;
     [SerializeField] private float _cooldown = 0.1f;
 

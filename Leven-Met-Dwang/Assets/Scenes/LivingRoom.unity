@@ -10000,7 +10000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a25eb0eccab3ac14fb76dbaba16dc503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cooldownDuration: 0.5
+  _cooldownDuration: 1
   _autoTurnOffDuration: 10
   _waterSteam: {fileID: 926661388}
   _loopSound: {fileID: 0}
@@ -10775,7 +10775,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e151f369cef4892448e6a5536567056f, type: 2}
+      objectReference: {fileID: -741623245571686893, guid: 14af3fb05c0bfcd49bc80060396785c5,
+        type: 3}
     - target: {fileID: 5789251661585699498, guid: 618b221049819874fbfb6767764ce716,
         type: 3}
       propertyPath: m_Limits.max
@@ -10795,7 +10796,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e151f369cef4892448e6a5536567056f, type: 2}
+      objectReference: {fileID: -8678692129392781253, guid: 14af3fb05c0bfcd49bc80060396785c5,
+        type: 3}
     - target: {fileID: 9098500106567097943, guid: 618b221049819874fbfb6767764ce716,
         type: 3}
       propertyPath: m_LocalScale.x

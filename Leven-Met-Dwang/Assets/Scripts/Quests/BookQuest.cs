@@ -10,20 +10,19 @@ public class BookQuest : Quest
 
     private void OnEnable()
     {
-        ChangeUI();
+        ChangeUI(); // Call the method to change UI related to the quest
     }
-
 
     override public void ChangeUI()
     {
-        EventBus<OnUIChange>.Publish(new OnUIChange("Plaats de boeken op de juiste plek"));
+        EventBus<OnUIChange>.Publish(new OnUIChange("Plaats de boeken op de juiste plek")); // Publish UI change event
     }
 
     override public void ActivateQuest()
     {
         // Find all instances of BookPlaceChecker in the scene
         _bookCheckers = FindObjectsOfType<BookPlaceChecker>();
-        InvokeRepeating("CheckQuestCompletion", 1f, 1f);
+        InvokeRepeating("CheckQuestCompletion", 1f, 1f); // Invoke a method repeatedly after a delay
         Debug.Log("Quest Started");
     }
 
@@ -48,13 +47,13 @@ public class BookQuest : Quest
             }
         }
 
-        //Debug.Log("Booksplaced" + allCheckersFilled);
+        // Debug.Log("Booksplaced" + allCheckersFilled);
 
-        // Now you can use the 'allCheckersFilled' boolean to determine if all checkers are filled
+        // Determine if all checkers are filled and the quest is not completed
         if (allCheckersFilled && _questCompleted == false)
         {
-            EventBus<OnQuestComplete>.Publish(new OnQuestComplete());
-            _questCompleted = true;
+            EventBus<OnQuestComplete>.Publish(new OnQuestComplete()); // Publish quest completion event
+            _questCompleted = true; // Set quest completion flag to true
         }
     }
 }

@@ -22,6 +22,7 @@ public class EventBus<T> where T : Event
     }
 }
 
+// Event indicating the start of a quest with a provided value
 public class OnQuestStart : Event
 {
     public readonly string value;
@@ -31,6 +32,7 @@ public class OnQuestStart : Event
     }
 }
 
+// Event indicating the completion of a quest
 public class OnQuestComplete : Event
 {
     public OnQuestComplete()
@@ -38,6 +40,7 @@ public class OnQuestComplete : Event
     }
 }
 
+// Event triggered when a light is clicked
 public class OnLightClicked : Event
 {
     public OnLightClicked()
@@ -45,6 +48,7 @@ public class OnLightClicked : Event
     }
 }
 
+// Event indicating the completion of all quests
 public class OnAllQuestsComplete : Event
 {
     public OnAllQuestsComplete()
@@ -52,6 +56,7 @@ public class OnAllQuestsComplete : Event
     }
 }
 
+// Event for UI change with a provided value
 public class OnUIChange : Event
 {
     public readonly string value;
@@ -61,6 +66,7 @@ public class OnUIChange : Event
     }
 }
 
+// Event triggered when entering a room
 public class EnteredRoom : Event
 {
     public EnteredRoom()
@@ -68,6 +74,7 @@ public class EnteredRoom : Event
     }
 }
 
+// Event for hand washing action
 public class WashHand : Event
 {
     public WashHand()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Abstract class defining the structure of a quest
 public abstract class Quest : MonoBehaviour
 {
     [SerializeField] public string questName;
