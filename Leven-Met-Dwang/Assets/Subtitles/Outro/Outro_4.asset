@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 0
   duration: 8
-  text: Dit project is een persoonlijke interpretatie en klopt niet voor iedereen.
+  text: Er is veel onderzoek gedaan naar OCD voor dit project. Maar wees er van bewust
+    dat dit een persoonlijke interpretatie is, en niet voor iedereen zal kloppen.
