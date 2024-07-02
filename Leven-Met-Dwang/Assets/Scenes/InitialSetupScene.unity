@@ -194,6 +194,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1701918855}
+    - targetCorrespondingSourceObject: {fileID: 6885397088213889471, guid: c46aef194f195c84b8f066b9a02a23c5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1701918858}
   m_SourcePrefab: {fileID: 100100000, guid: c46aef194f195c84b8f066b9a02a23c5, type: 3}
 --- !u!1 &1701918854 stripped
 GameObject:
@@ -215,6 +219,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneName: MainMenu
   _cooldown: 0.1
+--- !u!114 &1701918858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701918854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8495a988fde208840896548816b5e43d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1963424921
 GameObject:
   m_ObjectHideFlags: 0
